@@ -1,0 +1,113 @@
+@import "spinner";
+@import "table";
+
+html, body, #root {
+  height: 100%;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .card {
+    margin: 0;
+    width: 450px;
+    max-width: 90%;
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    .logo {
+      display: inline-block;
+      margin-right: 20px;
+      height: 50px;
+    }
+
+    .btn-login {
+      width: 100%;
+    }
+
+    .form-error {
+      min-height: 28px;
+    }
+  }
+}
+
+.modal {
+  background-color: rgba(0, 5, 15, 0.2);
+
+  &.show {
+    .modal-dialog {
+      transform: translate(0, 10%);
+    }
+  }
+  
+  .modal-content {
+    background-color: #27293d;
+  
+    label,
+    .modal-content,
+    .modal-body p,
+    .modal-header > .modal-title {
+      color: #fff;
+    }
+  
+    label {
+      font-size: .75rem;
+      margin-bottom: 5px;
+    }
+  }
+
+  .modal-xl {
+    max-width: 1000px;
+  }
+}
+
+.dropdown-menu {
+  background-color: #27293d;
+
+  .dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown-item {
+    cursor: pointer;
+  }
+}
+
+.btn.btn-link {
+  color: #546695;
+}
+
+.inline-checkbox {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  color: rgba(255,255,255,0.7) !important;
+  height: 38px;
+  font-size: 16px !important;
+
+  .form-check-input {
+    margin-top: 0;
+  }
+}
+
+.sidebar .logo .simple-text.logo-normal {
+  line-height: 18px;
+  small {
+    color: rgba(255,255,255,0.6);
+  }
+}
+
+.form-check .form-check-label:not(.inline-checkbox) {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  color: #fff;
+}
