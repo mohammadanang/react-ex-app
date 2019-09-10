@@ -4,9 +4,11 @@ import Cookies from "js-cookie";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
-      <Component {...props} />
+    Cookies.get("access_token")
+      ? <Component {...props} />
+      : <Redirect to={{ pathname: "/login", state: { from: props.location } }} />
     )} 
   />
 );
 
-export default PrivateRoute;
+export default PrivateRoute

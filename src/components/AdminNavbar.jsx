@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 // nodejs library that concatenates classes
-import classNames from "classnames";
-// import Auth from "services/Auth";
-import Cookies from "js-cookie";
+import classNames from "classnames"
+import Auth from "services/Auth"
+import Cookies from "js-cookie"
 
 // reactstrap components
 import {
@@ -20,7 +20,7 @@ import {
   Nav,
   Container,
   Modal
-} from "reactstrap";
+} from "reactstrap"
 
 class AdminNavbar extends React.Component {
   constructor(props) {
@@ -76,10 +76,10 @@ class AdminNavbar extends React.Component {
     });
   };
 
-  // logout = () => {
-  //   Auth.clearAuthCookies();
-  //   this.props.history.push('/login');
-  // }
+  logout = () => {
+    Auth.clearAuthCookies();
+    this.props.history.push('/login');
+  }
 
   render() {
     return (
@@ -199,7 +199,7 @@ class AdminNavbar extends React.Component {
                     </NavLink>
                     <DropdownItem divider tag="li" />
                     <NavLink tag="li">
-                      <DropdownItem className="nav-item">Log out</DropdownItem>
+                      <DropdownItem className="nav-item" onClick={this.logout}>Log out</DropdownItem>
                     </NavLink>
                   </DropdownMenu>
                 </UncontrolledDropdown>
