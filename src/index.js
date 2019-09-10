@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from 'serviceWorker';
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
-import PrivateRoute from "./components/PrivateRoute"
-import AdminLayout from "./layouts/Admin"
+import PrivateRoute from "components/PrivateRoute"
+import AdminLayout from "layouts/Admin"
 
-import "./assets/scss/black-dashboard-react.scss";
+import "assets/scss/black-dashboard-react.scss";
 import "react-toastify/dist/ReactToastify.css";
-import "./assets/demo/demo.css";
-import "./assets/css/nucleo-icons.css";
-import "./assets/scss/main.scss";
+import "assets/demo/demo.css";
+import "assets/css/nucleo-icons.css";
+import "assets/scss/main.scss";
 
 const hist = createBrowserHistory();
 
