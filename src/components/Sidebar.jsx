@@ -31,6 +31,8 @@ class Sidebar extends React.Component {
     if (navigator.platform.indexOf("Win") > -1) {
       ps.destroy();
     }
+
+    console.log(`Routes ${JSON.stringify(routes)}`)
   }
   linkOnClick = () => {
     document.documentElement.classList.remove("nav-open");

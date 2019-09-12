@@ -3,12 +3,12 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import Cookies from "js-cookie";
 
 // core components
-import AdminNavbar from "../components/AdminNavbar.jsx";
-import Sidebar from "../components/Sidebar.jsx";
+import AdminNavbar from "components/AdminNavbar.jsx";
+import Sidebar from "components/Sidebar.jsx";
 // import { roles } from "../constants";
-import routes from "../routes.js";
+import routes from "routes.js";
 
-import logo from "../assets/img/liki_logo.png";
+import logo from "assets/img/liki_logo.png";
 
 class Admin extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class Admin extends React.Component {
     document.documentElement.classList.toggle("nav-open");
     this.setState({ sidebarOpened: !this.state.sidebarOpened });
   };
-  filterRoutesByRole = (route) => route.roles ? route.roles.indexOf(Cookies.get('role')) > -1 : true
+  filterRoutesByRole = (route) => route.roles && true
   getRoutes = routes => {
     return routes.filter(this.filterRoutesByRole).map((prop, key) => {
       if (prop.layout === "/app") {
